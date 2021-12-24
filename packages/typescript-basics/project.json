@@ -1,0 +1,49 @@
+{
+  "root": "packages/typescript-basics",
+  "sourceRoot": "packages/typescript-basics/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/typescript-basics",
+        "main": "packages/typescript-basics/src/index.ts",
+        "tsConfig": "packages/typescript-basics/tsconfig.app.json",
+        "assets": [
+          "packages/typescript-basics/*.md"
+        ]
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "options": {
+        "buildTarget": "typescript-basics:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/typescript-basics/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/packages/typescript-basics"
+      ],
+      "options": {
+        "jestConfig": "packages/typescript-basics/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
