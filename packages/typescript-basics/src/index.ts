@@ -1,4 +1,3 @@
-import { typescriptBasics } from "./app/typescript-basics";
+import { es6Syntax } from "./app/es6Syntax";
 
-console.log(`Running ${typescriptBasics()}`);
-
+es6Syntax();

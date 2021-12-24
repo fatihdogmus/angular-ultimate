@@ -2,7 +2,9 @@
   "name": "angular-ultimate",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "basic": "nx serve typescript-basics"
+  },
   "private": true,
   "dependencies": {
     "tslib": "^2.0.0"
